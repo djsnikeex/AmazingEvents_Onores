@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/LogoAE-min.ico" type="image/x-icon">
+    <title>Home - Amazing Events</title>
+  </head>
+  <body class="bg-dark d-flex flex-column h-100 w-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./assets/img/LogoAE.ico" alt="Logo" height="30"
+              class="d-inline-block align-text-top">
+          </a>
+          <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#botonera" aria-controls="botonera"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="botonera">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="lista-botones">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"
+                  href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                  href="./pages/upcomingEvents.html">Upcoming Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/pastEvents.html">Past
+                  Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/stats.html">Stats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/details.html">Details</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="row" id="carousel-banner">
+        <div class="col-sm-12">
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myCarousel"
+                data-bs-slide-to="0" class="active" aria-label="Slide 1"
+                aria-current="true"></button>
+              <button type="button" data-bs-target="#myCarousel"
+                data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+              <button type="button" data-bs-target="#myCarousel"
+                data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+              <button type="button" data-bs-target="#myCarousel"
+                data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+              <button type="button" data-bs-target="#myCarousel"
+                data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+              <button type="button" data-bs-target="#myCarousel"
+                data-bs-slide-to="5" aria-label="Slide 6" class=""></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/img/carousel-cine.jpeg" class="d-block
+                  w-100"
+                  alt="banner-cine">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/carousel-museum.jpg" class="d-block
+                  w-100"
+                  alt="banner-museum">
+              </div>
+              <div class="carousel-item" >
+                <img src="./assets/img/carousel-marathon.jpg" class="d-block
+                  w-100"
+                  alt="banner-marathon" id="banner-marathon">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/carousel-costume-party.jpeg"
+                  class="d-block
+                  w-100"
+                  alt="banner-costume-party" id="banner-costume-party">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/carousel-food-fair.jpg" class="d-block
+                  w-100"
+                  alt="banner-food-fair">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/carousel-concert-music.jpg"
+                  class="d-block
+                  w-100"
+                  alt="banner-concert-music">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button"
+              data-bs-target="#myCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button"
+              data-bs-target="#myCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <div class="d-flex text-warning col-md-8 container-fluid
+            justify-content-between" id="categorias">
+            <div class="form-check">
+              <label class="form-check-label">
+                Category
+                <input class="form-check-input" type="checkbox" value="Category-1"
+                  id="flexCheckDefault">
+              </label>
+            </div>
+            <div class="form-check">
+
+              <label class="form-check-label">
+                Category
+                <input class="form-check-input" type="checkbox" value="Category-2"
+                  id="flexCheckDefault2">
+              </label>
+            </div>
+            <div class="form-check">
+
+              <label class="form-check-label">
+                Category
+                <input class="form-check-input" type="checkbox" value="Category-3"
+                  id="flexCheckDefault3">
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                Category
+                <input class="form-check-input" type="checkbox" value="Category-4"
+                  id="flexCheckDefault4">
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                Category
+                <input class="form-check-input" type="checkbox" value="Category-5"
+                  id="flexCheckDefault5">
+              </label>
+            </div>
+          </div>
+          <div class="container-fluid col-md-4 col-sm-12
+            d-flex justify-content-center">
+            <form class="d-flex flex-row align-items-center" role="search">
+              <input class="form-control me-2" type="search"
+                placeholder="Search" aria-label="Search">
+              <button type="button" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397
+                    1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0
+                    1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5
+                    5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </nav>
+        
+
+        <div class="container-fluid">
+          <div class="row">
+            <section class="card-group">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-lg-3 col-sm-6">
+                  <div class="card w-100 bg-secondary">
+                    <img src="./assets/img/Music_Concert.jpg "
+                      class="card-img-top"
+                      alt="Music_Concert" width="100">
+                    <div class="card-body">
+                      <h5 class="card-title">Music Concert</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="card w-100 bg-secondary">
+                    <img src="./assets/img/Music_Concert.jpg "
+                      class="card-img-top"
+                      alt="Music_Concert" width="100">
+                    <div class="card-body">
+                      <h5 class="card-title">Music Concert</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="card w-100 bg-secondary">
+                    <img src="./assets/img/Music_Concert.jpg "
+                      class="card-img-top"
+                      alt="Music_Concert" width="100">
+                    <div class="card-body">
+                      <h5 class="card-title">Music Concert</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                  <div class="card w-100 bg-secondary">
+                    <img src="./assets/img/Music_Concert.jpg "
+                      class="card-img-top"
+                      alt="Music_Concert" width="100">
+                    <div class="card-body">
+                      <h5 class="card-title">Music Concert</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center
+      py-3 my-4 bg-secondary">
+      <ul class="nav col-4 justify-content-center list-unstyled d-flex wrap">
+        <li class="ms-3"><img src="./assets/img/IG.png" class="bi"
+            height="30" alt="instagram"></li>
+        <li class="ms-3"><img src="./assets/img/FB.png" class="bi"
+            height="30" alt="facebook"></li>
+        <li class="ms-3"><img src="./assets/img/WSP.png" class="bi"
+            height="29" alt="whatsapp"></li>
+      </ul>
+      <div class="col-8 d-flex justify-content-center ">
+        <span class="mb-3 mb-md-0 text-bolder"><strong>2023 © Cohort 11</strong></span>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
