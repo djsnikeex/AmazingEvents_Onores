@@ -1,21 +1,26 @@
 import data from '../amazing.js';
-let eventosCompleto=[];
-function traerAll(eventosCompleto){
+
+function traerAll(){
+  let eventosCompletoAux=[];
     for(let i=0;i<data.events.length;i++){
-        eventosCompleto.push(data.events[i])
+        eventosCompletoAux.push(data.events[i])
     }
-    return eventosCompleto;
+    return eventosCompletoAux;
 }
 const manTarjetas= document.getElementById('tarjetas')
-eventosCompleto=traerAll(eventosCompleto)
-let tarjetas='';
+let fragmento = document.createDocumentFragment();
+
+let eventosCompleto=traerAll()
+
 for (const tarjeta of eventosCompleto) {
-    tarjetas += `<div class="col-lg-3 col-sm-6" >
+  let div = document.createElement('div');
+  div.classList='col-lg-3 col-sm-6';
+  div.innerHTML=`
     <div class="card w-100 h-100 bg-secondary">
       <img src="${tarjeta.image}"
         class="card-img-top"
         width="100" alt="${tarjeta.category}">
-      <div class="card-body h-100 w-100">
+      <div class="card-body h-50 w-100">
         <h5 class="card-title text-center">${tarjeta.name}</h5>
         <h6 class="card-text text-center">${tarjeta.category}</h6>
         <p class="card-text text-center">${tarjeta.date}</p>
@@ -24,6 +29,9 @@ for (const tarjeta of eventosCompleto) {
       </div> 
     </div>
   </div>`
+  fragmento.appendChild(div);
 }
 
-manTarjetas.innerHTML=tarjetas;
+  manTarjetas.appendChild(fragmento);
+
+
