@@ -13,10 +13,10 @@
     <link rel="icon" href="../assets/img/LogoAE-min.ico" type="image/x-icon">
     <title>Details - Amazing Events</title>
   </head>
-  <body class="bg-dark d-flex flex-column">
+  <body class="bg-dark d-flex flex-column h-100 w-100">
     <header>
-      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid rounded">
           <a class="navbar-brand" href="#">
             <img src="../assets/img/LogoAE.ico" alt="Logo" height="30"
               class="d-inline-block align-text-top">
@@ -55,32 +55,11 @@
 
     <main>
       <!-- Hacer una tarjeta que contenga una imagen a la izquierda y una descripcion a su derecha, hacer responsive-->
-      <div class="container-fluid">
-        <div class="container-fluid bg-secondary py-3 my-4 rounded text-center">
+      <div class="container-fluid rounded">
+        <div class="container-fluid bg-secondary py-2 rounded text-center
+          text-bolder text-warning">
           <h1>Details</h1></div>
-        <div class="card bg-secondary mb-3">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="../assets/img/carousel-costume-party.jpeg"
-                class="img-fluid rounded-start;"
-                alt="image-example" id="imagen-data">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h4 class="card-title">Data</h4>
-                <ul>
-                  <li> name </li>
-                  <li> date</li>
-                  <li>description</li>
-                  <li>category</li>
-                  <li>place</li>
-                  <li>capacity</li>
-                  <li>assistance or estimate</li>
-                  <li>price</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div id="tarjeta">
         </div>
       </div>
     </main>
@@ -95,12 +74,14 @@
             height="29" alt="whatsapp"></li>
       </ul>
       <div class="col-8 d-flex justify-content-center ">
-        <span class="mb-3 mb-md-0 text-bolder"><strong>2023 © Cohort 11</strong></span>
+        <span class="mb-3 mb-md-0 text-bolder text-warning"><strong>2023 ©
+            Cohort 11</strong></span>
       </div>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"></script>
+    <script type="module" src="../js/details.js"></script>
   </body>
 </html>
