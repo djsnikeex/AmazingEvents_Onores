@@ -18,16 +18,16 @@ export function createcard(eventos, container){
       let div = document.createElement('div');
       div.classList='col-lg-3 col-sm-6 d-flex';
       div.innerHTML=`
-      <div class="card h-100 w-100 border d-flex">
+      <div class="card h-100 w-100 border d-flex flex-grow-3 ">
         <img src="${tarjeta.image}"
           class="card-img-top h-50"
           width="100" alt="${tarjeta.category}">
-        <div class="card-body align-text-top w-100 d-flex flex-column  ">
-          <h5 class="card-title text-bolder text-center d-flex justify-content-center">${tarjeta.name}</h5>
+        <div class="card-body align-text-top w-100 d-flex flex-column flex-grow-3 ">
+          <h5 class="card-title text-bolder text-center d-flex justify-content-center flex-grow-3">${tarjeta.name}</h5>
           <p class="card-text text-center ">${tarjeta.description}</p>
         </div>
         <div class="card-footer d-flex  d-flex justify-self-end">
-        <a href="../pages/details.html?id=${tarjeta.id}" class="btn btn-primary w-100 border text-center " >Ver detalles</a>
+        <a href="../pages/details.html?id=${tarjeta.id}" class="btn btn-primary w-100 border text-center " >View details</a>
         </div>
       </div>
       
@@ -38,7 +38,7 @@ export function createcard(eventos, container){
   }
 
   export function filtrarBusqueda(array, busqueda){
-    return array.filter((item) => (item.name.toLowerCase().includes(busqueda.toLowerCase()))||(item.category.toLowerCase().includes(busqueda.toLowerCase()))) ;
+    return array.filter((item) => (item.name.toLowerCase().includes(busqueda.toLowerCase()))) ;
   }
 
   export function createcardDetails(evento, container){
@@ -53,7 +53,7 @@ export function createcard(eventos, container){
                 alt="image-example" id="imagen-data">
             </div>
             <div class="col-md-8 ">
-              <div class="card-body border-start">
+              <div class="card-body border-start ">
                 <h4 class="card-title text-center text-bolder">${evento.name}</h4>
                 <ul>
                   <li>Name: ${evento.name} </li>
@@ -65,15 +65,10 @@ export function createcard(eventos, container){
                   <li>Assistance: ${evento.assistance}</li>
                   <li>Price: $${evento.price}</li>
                 </ul>
-                <a href="../index.html" class="btn btn-primary w-100 border text-center " >Volver al inicio</a>
-              </div>
-              
+                <a href="javascript:history.back()" class="btn btn-primary w-100 border text-center " >Back</a>
+              </div> 
             </div>
-            
           </div>
-
-          
-        
     `
     fragmento.appendChild(div);
     container.appendChild(fragmento);
@@ -87,22 +82,20 @@ export function createcard(eventos, container){
           <div class="row g-0">
             <div class="col-md-4">
               <img src="../assets/img/searchNotFound.png"
-                class="img-fluid rounded-start;"
+                class="img-fluid rounded-start"
                 alt="image-example" id="imagen-data">
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h3 class="card-title text-center">No encontramos tu busqueda </h3>
-                <h5 class="text-center"> Intenta corregir tu busqueda <h5>
+                <h3 class="card-title text-center">Search not found</h3>
+                <h4 class="text-center"> Correct your search <h5>
               </div>
             </div>  
           </div>
-          <a href="../index.html" class="btn btn-primary w-100 border my-2 text-center  " >Volver al inicio</a>
     `
     fragmento.appendChild(div);
     container.appendChild(fragmento);
   }
-
   export function createCheckBox(array, container){
     let arrayCheckbox = array.map((item) => item.category);
     let setCheckbox = new Set(arrayCheckbox)
