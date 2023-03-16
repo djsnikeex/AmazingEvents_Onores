@@ -151,3 +151,8 @@ footer{
     background-attachment: fixed;
     color:black;
 }
+
+#imagen-data{
+    object-fit: cover;
+    width: 100%;
+}

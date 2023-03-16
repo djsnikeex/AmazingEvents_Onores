@@ -47,24 +47,24 @@ export function createcard(eventos, container){
       div.classList='card bg-secondary mb-3 border border-2';
       div.innerHTML=`
           <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-5">
               <img src="${evento.image}"
                 class="img-fluid rounded-start"
                 alt="image-example" id="imagen-data">
             </div>
-            <div class="col-md-8 ">
+            <div class="col-md-7 ">
               <div class="card-body border-start ">
-                <h4 class="card-title text-center text-bolder">${evento.name}</h4>
-                <ul>
-                  <li>Name: ${evento.name} </li>
-                  <li>Date: ${evento.date}</li>
-                  <li>Description: ${evento.description}</li>
-                  <li>Category: ${evento.category}</li>
-                  <li>Place: ${evento.place}</li>
-                  <li>Capacity: ${evento.capacity}</li>
-                  <li>Assistance: ${evento.assistance}</li>
-                  <li>Price: $${evento.price}</li>
-                </ul>
+            <dl class="card-list">
+              <dt><h3>${evento.name}</h3></dt><dd></dd>    
+              <dt>Date:</dt><dd>${evento.date}</dd>
+              <dt>Description:</dt><dd>${evento.description}</dd>
+              <dt>Category:</dt><dd>${evento.category}</dd>
+              <dt>Place:</dt><dd>${evento.place}</dd>
+              <dt>Capacity:</dt><dd>${evento.capacity}</dd>
+              <dt>${evento.assistance ? "Asistence" : "Estimate"}</dt>
+              <dd>${evento.assistance ? evento.assistance : evento.estimate}</dd>
+              <dt>Price $:</dt><dd>${evento.price}</dd>
+            </dl>
                 <a href="javascript:history.back()" class="btn btn-primary w-100 border text-center " >Back</a>
               </div> 
             </div>
