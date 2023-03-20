@@ -113,3 +113,87 @@ export function createcard(eventos, container){
     })
     container.innerHTML = checkboxes;
   }
+
+  export function drawTableForCategory(container,array){
+    let Category = traerCategory(array);
+    let table = '';
+    Category.forEach(category => {
+        let events = array.filter((item) => item.category === category);
+        let revenues = calculatorRevenues(events);
+        let percentageAttendance = calculatorPercentageAttendance(events);
+        table += `<tr>
+        <td>${category}</td>
+        <td>$${revenues}</td>
+        <td>${percentageAttendance}%</td>
+        </tr>`
+    });
+    container.innerHTML = table;
+
+
+}
+
+
+export function traerCategory(array){
+    let Category = array.map((item) => item.category);
+    let setCategory = new Set(Category)
+    Category = Array.from(setCategory)
+    return Category;
+}
+
+export function calculatorRevenues(array){
+    let revenues = 0;
+    array.forEach(event => {
+        revenues += (event.assistance ? event.assistance : event.estimate) * event.price;
+    });
+    return revenues;
+}
+
+export function calculatorPercentageAttendance(array){
+    let attendance = 0;
+    let capacity = 0;
+    array.forEach(event => {
+        capacity += event.capacity;
+        attendance += event.assistance ? event.assistance : event.estimate
+    });
+    return ((attendance/capacity)*100).toFixed(2);
+}
+
+export function drawEventsStats(container,array){
+   let events = array.events;
+   let table ='';
+    let mostAttendance = events.reduce((prev, current) => (
+      ((prev.assistance?prev.assistance : prev.estimate)/prev.capacity*100 > 
+      (current.assistance?current.assistance : current.estimate)/current.capacity*100) ? prev : current));
+  
+    let lowestAttendance =(events.reduce((prev, current) => 
+    ((prev.assistance?prev.assistance : prev.estimate)/prev.capacity*100 < 
+    (current.assistance?current.assistance : current.estimate)/current.capacity*100) ? prev : current));
+
+    let largeCapacity = events.reduce((prev, current) => (prev.capacity > current.capacity) ? prev : current);
+    table += `<tr>
+    <td>${mostAttendance.name}</td>
+    <tr>
+    <td>${lowestAttendance.name}</td>
+    </tr>
+    <tr>
+    <td>${largeCapacity.name}</td>
+    </tr>`
+    container.innerHTML = table;
+}
+
+export function filtrarCategory(array){
+  let category= Array.from(document.querySelectorAll('input[type="checkbox"]'));
+  category = category.filter(check => check.checked)
+  category = category.map(check => check.value)
+  let categoriasFiltradas = array.filter((evento) => category.includes(evento.category));
+  if(categoriasFiltradas.length>0){
+      return categoriasFiltradas
+  }
+  return array;
+}
+
+export function filtroConjunto(array,container,busquedaInput){
+  let eventosFiltrados= filtrarCategory(array)
+  eventosFiltrados = filtrarBusqueda(eventosFiltrados, busquedaInput.value)
+  createcard(eventosFiltrados, container)
+}

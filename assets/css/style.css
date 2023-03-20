@@ -154,5 +154,6 @@ footer{
 
 #imagen-data{
     object-fit: cover;
+    object-position: 0% 0%;
     width: 100%;
 }
