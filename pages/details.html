@@ -59,7 +59,32 @@
         <div class="container-fluid bg-secondary py-2 rounded text-center
           text-bolder text-warning">
           <h1>Details</h1></div>
-        <div id="tarjeta">
+        <div id="app" data-v-app>
+          <div class="card bg-secondary mb-3 border border-2">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img :src="evento.image"
+                  class="img-fluid rounded-start"
+                  alt="image-example" id="imagen-data">
+              </div>
+              <div class="col-md-7 ">
+                <div class="card-body border-start ">
+              <dl class="card-list">
+                <dt><h3>{{evento.name}}</h3></dt><dd></dd>    
+                <dt>Date:</dt><dd>{{evento.date}}</dd>
+                <dt>Description:</dt><dd>{{evento.description}}</dd>
+                <dt>Category:</dt><dd>{{evento.category}}</dd>
+                <dt>Place:</dt><dd>{{evento.place}}</dd>
+                <dt>Capacity:</dt><dd>{{evento.capacity}}</dd>
+                <dt>{{evento.assistance ? "Asistence" : "Estimate"}}</dt>
+                <dd>{{evento.assistance ? evento.assistance : evento.estimate}}</dd>
+                <dt>Price $:</dt><dd>{{evento.price}}</dd>
+              </dl>
+                  <a href="javascript:history.back()" class="btn btn-primary w-100 border text-center " >Back</a>
+                </div> 
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -84,5 +109,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"></script>
     <script type="module" src="../js/details.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </body>
 </html>
