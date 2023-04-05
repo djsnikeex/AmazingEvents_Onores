@@ -10,18 +10,27 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-style: italic;
+    font-family: 'Roboto', sans-serif;
 }
 
     
 body {
     height: 100vh;
     width: 100vw;
+
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
 }
 main{
     width: 100%;
     height: 100%;
     margin: 0%;
+    
 }
 .formulario{
     display: flex;
@@ -47,6 +56,7 @@ main{
     font-weight: bolder;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -75,16 +85,16 @@ caption{
 }
 
 .card-group .card {
-    display: inline-block;
+    display: flex;
     width: 100%;
   }
 
   .card-img-top {
     width: 100%;
-    height: 200px !important;
+    height: 250px !important;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-
+    object-fit: cover;
   }
 
   #imagen-data{
@@ -113,4 +123,37 @@ footer span{
 
 strong{
     font-size: 1.5rem;
+}
+
+
+.container-fluid{
+    background-image: url(../img/background-container.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+footer{
+    background-image: url(../img/background-container.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.card{
+    background-image: url(../img/background-card.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color:black;
+}
+
+#imagen-data{
+    object-fit: cover;
+    object-position: 0% 0%;
+    width: 100%;
 }
