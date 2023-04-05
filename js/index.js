@@ -11,7 +11,7 @@ const app = createApp({
         }
     }
     ,created(){
-        fetch('./data/amazing.json')
+        fetch('data/amazing.json')
         .then(response => response.json())
         .then(data => {
             this.eventos = data.events;
