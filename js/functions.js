@@ -27,7 +27,7 @@ export function createcard(eventos, container){
           <p class="card-text text-center ">${tarjeta.description}</p>
         </div>
         <div class="card-footer d-flex  d-flex justify-self-end">
-        <a href="djsnikeex.github.io/AmazingEvents_Onores/pages/details.html?id=${tarjeta.id}" class="btn btn-primary w-100 border text-center " >View details</a>
+        <a href="../pages/details.html?id=${tarjeta.id}" class="btn btn-primary w-100 border text-center " >View details</a>
         </div>
       </div>
       
