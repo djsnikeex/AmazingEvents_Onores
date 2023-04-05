@@ -5,7 +5,7 @@ const busquedaInput = document.getElementById('busqueda')
 const categorias = document.getElementById('categorias')
 
 async function iniciar(){
-    fetch('../data/amazing.json')
+    await fetch('../data/amazing.json')
                 .then(response => response.json())
                 .then(data => {
                     let eventosCompleto = data.events
@@ -18,5 +18,5 @@ async function iniciar(){
                 })
                 .catch(error => console.log(error))
 };
- await iniciar();
+  iniciar();
 
